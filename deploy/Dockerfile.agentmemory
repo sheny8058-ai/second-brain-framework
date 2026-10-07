@@ -1,0 +1,13 @@
+FROM node:22-slim
+
+# 安装 curl（agentmemory 需要它来下载引擎）
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+# 设置工作目录
+WORKDIR /home/node
+
+# 设置环境变量（运行时通过 -e 传入）
+ENV HOME=/home/node
+
+# 启动 agentmemory（不带参数，直接启动服务器）
+CMD ["npx", "-y", "@agentmemory/agentmemory@latest"]
