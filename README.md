@@ -49,7 +49,7 @@
 | `project-init` | 新子项目怎么立项 |
 | `handoff` | 换 Agent/换会话怎么交接 |
 | `retro` | 做完怎么复盘、新信号怎么回写 |
-| `security-policy` | Agent 权限边界（网络/文件/凭据/命令） |
+| `security-policy` | Agent 权限边界 + 四干预点拦截（pre_tool_call/input/output/post_tool_call） |
 
 详见 [docs/governance.md](docs/governance.md)。
 
